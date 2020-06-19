@@ -528,6 +528,7 @@ const getProfileFromGithub = (github, access_token, callback) => {
           }
 
           return callback(null, {
+            access_token,
             username: userbody.login,
             email: Array.isArray(emailsbody)
               ? emailsbody.find((email) => email.primary === true).email
@@ -549,6 +550,7 @@ const getProfileFromFacebook = (facebook, access_token, callback) => {
         callback(null, {
           username: body.name,
           email: body.email,
+          access_token,
         });
       }
     });

@@ -1,0 +1,13 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/getEnabledProviders",
+      "handler": "Auth.getEnabledProviders",
+      "config": {
+        "prefix": "",
+        "policies": []
+      }
+    }
+  ]
+}
